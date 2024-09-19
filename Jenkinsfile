@@ -14,6 +14,18 @@ pipeline {
                 sh './Test.sh'  // Execute the script
             }
         }
+        
+        stage('Test') {
+            steps {
+                echo "This is Test Stage"
+            }
+        }
+        
+        stage('Deployment') {
+            steps {
+                echo "This is Deployment Stage"
+            }
+        }
     }
     
     post {
